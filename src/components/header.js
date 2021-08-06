@@ -2,13 +2,13 @@ import React from "react"
 
 // styled comonents
 import { HeaderNav } from "../styles/headerStyles"
-import { Container } from "../styles/globalStyles"
+import { Container, Flex } from "../styles/globalStyles"
 
 const Header = () => {
   return (
     <HeaderNav>
       <Container>
-        {/* <Flex>
+        <Flex spaceBetween noHeight>
           <Logo>logo</Logo>
           <Menu>
             <button>
@@ -16,8 +16,7 @@ const Header = () => {
               <span></span>
             </button>
           </Menu>
-        </Flex> */}
-        hello
+        </Flex>
       </Container>
     </HeaderNav>
   )
