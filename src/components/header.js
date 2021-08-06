@@ -1,7 +1,7 @@
 import React from "react"
 
 // styled comonents
-import { HeaderNav } from "../styles/headerStyles"
+import { HeaderNav, Logo, Menu } from "../styles/headerStyles"
 import { Container, Flex } from "../styles/globalStyles"
 
 const Header = () => {
