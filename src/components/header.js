@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 // styled comonents
@@ -22,6 +22,10 @@ const Header = () => {
       dispatch({ type: "TOGGLE_THEME", theme: "dark" })
     }
   }
+
+  useEffect(() => {
+    window.localStorage.setItem("theme", currentTheme)
+  }, [currentTheme])
 
   return (
     <HeaderNav>
