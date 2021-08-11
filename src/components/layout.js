@@ -8,7 +8,7 @@ import { normalize } from "styled-normalize"
 
 // components
 import Header from "./header"
-import { Cursor } from "../styles/globalStyles"
+import Cursor from "../components/customCursor"
 
 // context
 import { useGlobalStateContext } from "../context/globalContext"
@@ -17,6 +17,8 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
   * {
     text-decoration: none;
+    height: 100%;
+    cursor: none;
   }
 
   html {

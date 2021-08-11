@@ -22,7 +22,7 @@ export const Container = styled.div`
     css`
       padding: 0;
       margin: 0;
-      max-width: 100%;
+      /* max-width: 100%; */
     `}
 `
 export const Flex = styled.div`
@@ -57,8 +57,8 @@ export const Flex = styled.div`
 
 export const Cursor = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   width: 32px;
   height: 32px;
   background: ${props => props.theme.red};
