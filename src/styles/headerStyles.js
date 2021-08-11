@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-export const HeaderNav = styled.div`
+export const HeaderNav = styled(motion.div)`
   height: 0px;
   width: 100%;
   position: absolute;
@@ -16,17 +17,10 @@ export const Logo = styled.div`
     color: ${props => props.theme.text};
   }
   span {
-    /* height: 1rem;
-    width: 1rem;
-    background-color: ${props => props.theme.red};
-    margin: 0 4px;
-    border-radius: 100%;
-    display: inline-block;
     position: relative;
-    bottom: 2px; */
-    font-size:1.8rem;
+    font-size: 1.8rem;
     font-weight: 800;
-    color: ${props => props.theme.red}
+    color: ${props => props.theme.red};
   }
 `
 
@@ -44,6 +38,7 @@ export const Menu = styled.div`
       display: block;
       background: ${props => props.theme.text};
       margin: 8px;
+      position: relative;
     }
   }
 `

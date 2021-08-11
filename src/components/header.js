@@ -28,9 +28,12 @@ const Header = () => {
   }, [currentTheme])
 
   return (
-    <HeaderNav>
+    <HeaderNav
+      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: -72, opacity: 0 }}
+      transition={{ duration: 1, ease: [0.6, 0.05, -0.01, 0.9] }}
+    >
       <Container>
-        {console.log(currentTheme)}
         <Flex spaceBetween noHeight>
           <Logo>
             <Link to="/">IC</Link>
