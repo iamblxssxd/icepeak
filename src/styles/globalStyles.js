@@ -75,5 +75,9 @@ export const Cursor = styled.div`
     width: 56px;
     height: 56px;
     border: 4px solid ${props => props.theme.red};
+
+    &.pointer {
+      border: 4px solid ${props => props.theme.text};
+    }
   }
 `
