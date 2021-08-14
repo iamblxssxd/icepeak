@@ -17,7 +17,6 @@ export const Logo = styled.div`
     color: ${props => props.theme.text};
   }
   span {
-    position: relative;
     font-size: 1.8rem;
     font-weight: 800;
     color: ${props => props.theme.red};
@@ -38,7 +37,6 @@ export const Menu = styled.div`
       display: block;
       background: ${props => props.theme.text};
       margin: 8px;
-      position: relative;
     }
   }
 `

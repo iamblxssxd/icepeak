@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
   * {
     text-decoration: none;
-    height: 100%;
+    /* height: 100%; */
     cursor: none;
   }
 
