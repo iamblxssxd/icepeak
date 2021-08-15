@@ -11,8 +11,16 @@ import {
 const HomeBanner = () => {
   return (
     <Banner>
-      {/* <Video></Video>
-      <Canvas />
+      <Video>
+        <video
+          height="100%"
+          width="100%"
+          loop
+          autoPlay
+          src={require("../../assets/video/icepeak_homepage.mp4")}
+        />
+      </Video>
+      {/* <Canvas />
       <BannerTitle>
         <Headline>Ice</Headline>
         <Headline>Peak</Headline>
