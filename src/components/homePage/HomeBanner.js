@@ -1,4 +1,5 @@
 import React from "react"
+import { useEffect, useRef } from "react"
 
 import {
   Banner,
@@ -9,6 +10,25 @@ import {
 } from "../../styles/homeStyles"
 
 const HomeBanner = () => {
+  let canvas = useRef(null)
+
+  useEffect(() => {
+    let renderingElement = canvas.current
+    let drawingElement = renderingElement.cloneNode()
+
+    let dwaringCtx = drawingElement.getContext("2d")
+    let renderingCtx = renderingElement.getContext("2d")
+
+    let lastX
+    let lastY
+
+    let moving = false
+
+    renderingCtx.globalCompositeOperation = "source-over"
+    renderingCtx.fillStyle = "#000000"
+    renderingCtx.fillRect(0, 0, 100, 100)
+  }, [])
+
   return (
     <Banner>
       <Video>
@@ -20,11 +40,11 @@ const HomeBanner = () => {
           src={require("../../assets/video/icepeak_homepage.mp4")}
         />
       </Video>
-      {/* <Canvas />
+      <Canvas ref={canvas} />
       <BannerTitle>
         <Headline>Ice</Headline>
         <Headline>Peak</Headline>
-      </BannerTitle> */}
+      </BannerTitle>
     </Banner>
   )
 }
