@@ -9,8 +9,12 @@ import {
   Headline,
 } from "../../styles/homeStyles"
 
+// windowSize hook
+import useWindowSize from "../../hooks/useWindowSize"
+
 const HomeBanner = () => {
   let canvas = useRef(null)
+  const size = useWindowSize()
 
   useEffect(() => {
     let renderingElement = canvas.current
@@ -26,7 +30,7 @@ const HomeBanner = () => {
 
     renderingCtx.globalCompositeOperation = "source-over"
     renderingCtx.fillStyle = "#000000"
-    renderingCtx.fillRect(0, 0, 100, 100)
+    renderingCtx.fillRect(0, 0, size.width, size.heigth)
   }, [])
 
   return (
@@ -40,7 +44,7 @@ const HomeBanner = () => {
           src={require("../../assets/video/icepeak_homepage.mp4")}
         />
       </Video>
-      <Canvas ref={canvas} />
+      <Canvas height={size.heigth} width={size.width} ref={canvas} />
       <BannerTitle>
         <Headline>Ice</Headline>
         <Headline>Peak</Headline>
