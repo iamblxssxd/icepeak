@@ -9,12 +9,16 @@ import {
   Headline,
 } from "../../styles/homeStyles"
 
+// context
+import { useGlobalStateContext } from "../../context/globalContext"
+
 // windowSize hook
 import useWindowSize from "../../hooks/useWindowSize"
 
 const HomeBanner = () => {
   let canvas = useRef(null)
   const size = useWindowSize()
+  const { currentTheme } = useGlobalStateContext()
 
   useEffect(() => {
     let renderingElement = canvas.current
@@ -29,9 +33,9 @@ const HomeBanner = () => {
     let moving = false
 
     renderingCtx.globalCompositeOperation = "source-over"
-    renderingCtx.fillStyle = "#000000"
+    renderingCtx.fillStyle = currentTheme === "dark" ? "#000000" : "#ffffff"
     renderingCtx.fillRect(0, 0, size.width, size.heigth)
-  }, [])
+  }, [currentTheme])
 
   return (
     <Banner>
