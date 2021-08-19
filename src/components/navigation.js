@@ -1,7 +1,15 @@
 import React from "react"
+import { Link } from "gatsby"
 
 // styled components
 import { Container, Flex } from "../styles/globalStyles"
+import {
+  Nav,
+  NavHeader,
+  CloseNav,
+  NavList,
+  NavFooter,
+} from "../styles/navigationStyles"
 
 const Navigation = () => {
   return (
