@@ -59,7 +59,17 @@ const Navigation = () => {
             {navRoutes.map(route => (
               <li key={route.id}>
                 <Link to={`/projects/${route.path}`}>
-                  <motion.div className="link">
+                  <motion.div
+                    initial={{ x: -108 }}
+                    whileHover={{
+                      x: -40,
+                      transition: {
+                        duration: 0.4,
+                        ease: [0.6, 0.06, -0.01, 0.9],
+                      },
+                    }}
+                    className="link"
+                  >
                     <span className="arrow">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
