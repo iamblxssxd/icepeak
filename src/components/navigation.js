@@ -36,7 +36,7 @@ const navRoutes = [
 
 const Navigation = () => {
   const [revealVideo, setRevealVideo] = useState({
-    show: true,
+    show: false,
     video: "icepeak_homepage.mp4",
     key: "0",
   })
@@ -57,7 +57,23 @@ const Navigation = () => {
         <NavList>
           <ul>
             {navRoutes.map(route => (
-              <li key={route.id}>
+              <motion.li
+                key={route.id}
+                onHoverStart={() =>
+                  setRevealVideo({
+                    show: true,
+                    video: route.video,
+                    key: route.id,
+                  })
+                }
+                onHoverEnd={() =>
+                  setRevealVideo({
+                    show: false,
+                    video: route.video,
+                    key: route.id,
+                  })
+                }
+              >
                 <Link to={`/projects/${route.path}`}>
                   <motion.div
                     initial={{ x: -108 }}
@@ -85,13 +101,16 @@ const Navigation = () => {
                     {route.title}
                   </motion.div>
                 </Link>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </NavList>
         <NavFooter></NavFooter>
         <NavVideos>
-          <div className="reveal"></div>
+          <motion.div
+            animate={{ width: revealVideo.show ? 0 : "100%" }}
+            className="reveal"
+          ></motion.div>
           <div className="video">
             <video
               src={require(`../assets/video/${revealVideo.video}`)}
