@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
+import { motion } from "framer-motion"
 
 // styled components
 import { Container, Flex } from "../styles/globalStyles"
@@ -9,6 +10,7 @@ import {
   CloseNav,
   NavList,
   NavFooter,
+  NavVideos,
 } from "../styles/navigationStyles"
 
 const navRoutes = [
@@ -33,6 +35,11 @@ const navRoutes = [
 ]
 
 const Navigation = () => {
+  const [revealVideo, setRevealVideo] = useState({
+    show: true,
+    video: "icepeak_homepage.mp4",
+    key: "0",
+  })
   return (
     <Nav>
       <Container>
@@ -52,7 +59,7 @@ const Navigation = () => {
             {navRoutes.map(route => (
               <li key={route.id}>
                 <Link to={`/projects/${route.path}`}>
-                  <div className="link">
+                  <motion.div className="link">
                     <span className="arrow">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -66,13 +73,24 @@ const Navigation = () => {
                       </svg>
                     </span>
                     {route.title}
-                  </div>
+                  </motion.div>
                 </Link>
               </li>
             ))}
           </ul>
         </NavList>
         <NavFooter></NavFooter>
+        <NavVideos>
+          <div className="reveal"></div>
+          <div className="video">
+            <video
+              src={require(`../assets/video/${revealVideo.video}`)}
+              loop
+              autoPlay
+              muted
+            ></video>
+          </div>
+        </NavVideos>
       </Container>
     </Nav>
   )
