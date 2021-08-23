@@ -81,7 +81,11 @@ const Layout = ({ children }) => {
         toggleMenu={toggleMenu}
         setToggleMenu={setToggleMenu}
       />
-      <Navigation toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
+      <Navigation
+        toggleMenu={toggleMenu}
+        setToggleMenu={setToggleMenu}
+        onCursor={onCursor}
+      />
       <main>{children}</main>
     </ThemeProvider>
   )
