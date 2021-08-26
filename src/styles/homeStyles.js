@@ -19,14 +19,6 @@ export const Video = styled.div`
   }
 `
 
-export const Canvas = styled.canvas`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  display: block;
-`
-
 export const BannerTitle = styled(motion.h1)`
   position: absolute;
   bottom: -120px;
