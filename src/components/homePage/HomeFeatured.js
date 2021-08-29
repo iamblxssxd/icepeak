@@ -16,7 +16,7 @@ const HomeFeatured = () => {
       <Container>
         <Link>
           <FeaturedContent>
-            <Flex>
+            <Flex spaceBetween>
               <h3>Featured</h3>
               <div className="meta">
                 <h4>Death No More</h4>
@@ -50,7 +50,7 @@ const HomeFeatured = () => {
         <FeaturedProjects>
           <Flex flexEnd>
             <button>
-              <span>All Projects</span>
+              <span>More Videos</span>
             </button>
           </Flex>
         </FeaturedProjects>
