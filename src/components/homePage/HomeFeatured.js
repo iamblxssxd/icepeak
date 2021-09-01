@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
+import { motion } from "framer-motion"
 
 // styled components
 import { Container, Flex } from "../../styles/globalStyles"
@@ -10,29 +11,45 @@ import {
   FeaturedProjects,
 } from "../../styles/homeStyles"
 
-const HomeFeatured = () => {
+const HomeFeatured = ({ onCursor }) => {
+  const [hovered, setHovered] = useState(false)
+
   return (
     <HomeFeaturedSection>
       <Container>
         <Link>
-          <FeaturedContent>
+          <FeaturedContent
+            onHoverStart={() => setHovered(!hovered)}
+            onHoverEnd={() => setHovered(!hovered)}
+            onMouseEnter={() => onCursor("hovered")}
+            onMouseLeave={onCursor}
+          >
             <Flex spaceBetween>
               <h3>Featured</h3>
-              <div className="meta">
+              <motion.div
+                className="meta"
+                animate={{ opacity: hovered ? 1 : 0 }}
+                transition={{ duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }}
+              >
                 <h4>Death No More</h4>
                 <h4>2018</h4>
-              </div>
+              </motion.div>
             </Flex>
             <h2 className="featured-title">
               DEATH <br /> NO MORE
               <div className="arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 57">
+                <motion.svg
+                  animate={{ x: hovered ? 48 : 0 }}
+                  transition={{ duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 101 57"
+                >
                   <path
                     d="M33 34H0V24h81.429L66 7.884 73.548 0l19.877 20.763.027-.029L101 28.618 73.829 57l-7.548-7.884L80.753 34H33z"
                     fill="#FFF"
                     fillRule="evenodd"
                   ></path>
-                </svg>
+                </motion.svg>
               </div>
             </h2>
           </FeaturedContent>
