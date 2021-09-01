@@ -1,6 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
+
+// Scroll Behavior
+import { useInView } from "react-intersection-observer"
+import { useAnimation } from "framer-motion"
 
 // styled components
 import { Container, Flex } from "../../styles/globalStyles"
@@ -13,9 +17,35 @@ import {
 
 const HomeFeatured = ({ onCursor }) => {
   const [hovered, setHovered] = useState(false)
+  const animation = useAnimation()
+  const [featuredRef, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-300px",
+  })
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible")
+    }
+  }, [animation, inView])
 
   return (
-    <HomeFeaturedSection>
+    <HomeFeaturedSection
+      ref={featuredRef}
+      animate={animation}
+      initial="hidden"
+      variants={{
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] },
+        },
+        hidden: {
+          opacity: 0,
+          y: 72,
+        },
+      }}
+    >
       <Container>
         <Link>
           <FeaturedContent

@@ -47,7 +47,7 @@ export const Content = styled.h2`
   color: ${props => props.theme.text};
 `
 
-export const HomeFeaturedSection = styled.div`
+export const HomeFeaturedSection = styled(motion.div)`
   margin-bottom: 200px;
   position: relative;
 

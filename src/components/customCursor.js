@@ -5,6 +5,7 @@ import { Cursor } from "../styles/globalStyles"
 // context
 import { useGlobalStateContext } from "../context/globalContext"
 
+// TODO improve scroll
 const CustomCursor = ({ toggleMenu }) => {
   const { cursorType } = useGlobalStateContext()
   const [mousePosition, setMousePosition] = useState({
