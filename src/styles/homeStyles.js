@@ -45,6 +45,10 @@ export const Content = styled.h2`
   font-weight: 400;
   margin-left: 124px;
   color: ${props => props.theme.text};
+
+  a {
+    color: ${props => props.theme.text};
+  }
 `
 
 export const HomeFeaturedSection = styled(motion.div)`

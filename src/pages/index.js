@@ -23,7 +23,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <HomeBanner onCursor={onCursor} />
-      <HomeContent />
+      <HomeContent onCursor={onCursor} />
       <HomeFeatured onCursor={onCursor} />
     </Layout>
   )
