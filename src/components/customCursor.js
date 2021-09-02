@@ -1,22 +1,19 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 
+// styled components
 import { Cursor } from "../styles/globalStyles"
 
 // context
 import { useGlobalStateContext } from "../context/globalContext"
 
-// TODO improve scroll
 const CustomCursor = ({ toggleMenu }) => {
   const { cursorType } = useGlobalStateContext()
-  const [mousePosition, setMousePosition] = useState({
-    x: 400,
-    y: 400,
-  })
+  const cursor = useRef(null)
 
   const onMouseMove = event => {
-    const { pageX: x, pageY: y } = event
-    console.log(x, y)
-    setMousePosition({ x, y })
+    const { clientX, clientY } = event
+    cursor.current.style.left = `${clientX}px`
+    cursor.current.style.top = `${clientY}px`
   }
 
   useEffect(() => {
@@ -33,7 +30,7 @@ const CustomCursor = ({ toggleMenu }) => {
         className={`${!!cursorType ? "hovered" : ""} ${cursorType} ${
           toggleMenu ? "nav-open" : ""
         }`}
-        style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
+        ref={cursor}
       />
     </>
   )

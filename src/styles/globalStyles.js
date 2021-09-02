@@ -56,9 +56,9 @@ export const Flex = styled.div`
 `
 
 export const Cursor = styled.div`
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: fixed;
+  top: 400px;
+  left: 400px;
   width: 32px;
   height: 32px;
   background: ${props => props.theme.red};
