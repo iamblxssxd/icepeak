@@ -15,7 +15,7 @@ const HomeAbout = () => {
   return (
     <HomeAboutSection>
       <Container>
-        <Flex>
+        <Flex alignTop>
           <About>
             <h2>
               IC3PEAK’s music focuses largely on social commentary on modern
