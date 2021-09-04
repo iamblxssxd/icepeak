@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 
+// components
 import HomeBanner from "../components/homePage/HomeBanner"
 import HomeContent from "../components/homePage/HomeContent"
 import HomeFeatured from "../components/homePage/HomeFeatured"
+import HomeAbout from "../components/homePage/homeAbout"
 
 // context
 import {
@@ -25,6 +27,7 @@ const IndexPage = props => {
       <HomeBanner onCursor={onCursor} />
       <HomeContent onCursor={onCursor} />
       <HomeFeatured onCursor={onCursor} />
+      <HomeAbout />
     </Layout>
   )
 }

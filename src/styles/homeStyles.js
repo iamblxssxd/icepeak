@@ -158,3 +158,16 @@ export const FeaturedProjects = styled.div`
     }
   }
 `
+// about
+export const HomeAboutSection = styled.div``
+
+export const About = styled.div``
+
+export const Links = styled.div``
+
+// accordion
+export const AccordionHeader = styled.div``
+
+export const AccordionIcon = styled.div``
+
+export const AccordionContent = styled.div``
