@@ -73,13 +73,15 @@ const Accordion = ({ details, expanded, setExpanded }) => {
   const isOpen = details.id === expanded
   return (
     <>
-      <AccordionHeader>
+      <AccordionHeader onClick={() => setExpanded(isOpen ? false : details.id)}>
         <AccordionIcon>
           <motion.span
             animate={{ rotate: isOpen ? 0 : 45, x: 3 }}
+            transition={{ duration: 0.2, ease: [0.5, 0.05, -0.01, 0.9] }}
           ></motion.span>
           <motion.span
             animate={{ rotate: isOpen ? 0 : -45, x: -3 }}
+            transition={{ duration: 0.2, ease: [0.5, 0.05, -0.01, 0.9] }}
           ></motion.span>
         </AccordionIcon>
         {details.title}
@@ -87,6 +89,7 @@ const Accordion = ({ details, expanded, setExpanded }) => {
       <AccordionContent
         key="content"
         animate={{ height: isOpen ? "100%" : "0" }}
+        transition={{ duration: 0.8, ease: [0.5, 0.05, -0.01, 0.9] }}
       >
         {details.results.map((result, index) => (
           <span key={index}>{result}</span>

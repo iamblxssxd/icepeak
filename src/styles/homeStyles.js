@@ -203,7 +203,7 @@ export const AccordionIcon = styled.div`
   span {
     width: 16px;
     height: 4px;
-    background: #ea281e;
+    background: ${props => props.theme.red};
     transition: all 0.1s ease-in-out;
   }
 `
