@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 // styled components
 import { Container, Flex } from "../../styles/globalStyles"
@@ -11,7 +11,28 @@ import {
   AccordionContent,
 } from "../../styles/homeStyles"
 
+// accordion Data
+const accordionIds = [
+  {
+    id: 0,
+    title: "Music",
+    results: ["Youtube", "Spotify", "Apple", "Soundcloud", "Genius"],
+  },
+  {
+    id: 1,
+    title: "Press",
+    results: [
+      "Let It All Burn.",
+      "The Guardian interview with IC3PEAK",
+      "Russia: Fighting the Kremlin with music",
+      "IC3PEAK – music and modern art",
+      "Young Russian Musicians Struggle Under Government Scrutiny",
+    ],
+  },
+]
+
 const HomeAbout = () => {
+  const [expanded, setExpanded] = useState(0)
   return (
     <HomeAboutSection>
       <Container>
@@ -31,7 +52,14 @@ const HomeAbout = () => {
           </About>
           <Links>
             <h3>Links</h3>
-            <Accordion />
+            {accordionIds.map((details, index) => (
+              <Accordion
+                key={index}
+                details={details}
+                expanded={expanded}
+                setExpanded={setExpanded}
+              />
+            ))}
           </Links>
         </Flex>
       </Container>
@@ -39,7 +67,8 @@ const HomeAbout = () => {
   )
 }
 
-const Accordion = () => {
+const Accordion = ({ details, expanded, setExpanded }) => {
+  const isOpen = details.id === expanded
   return (
     <>
       <AccordionHeader>
@@ -47,12 +76,15 @@ const Accordion = () => {
           <span></span>
           <span></span>
         </AccordionIcon>
-        Hello Youtube
+        {details.title}
       </AccordionHeader>
-      <AccordionContent>
-        <span>Twitter</span>
-        <span>Instagram</span>
-        <span>Facebook</span>
+      <AccordionContent
+        key="content"
+        animate={{ height: isOpen ? "100%" : "0" }}
+      >
+        {details.results.map((result, index) => (
+          <span key={index}>{result}</span>
+        ))}
       </AccordionContent>
     </>
   )
