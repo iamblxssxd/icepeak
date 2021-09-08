@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 
+import { motion } from "framer-motion"
+
 // styled components
 import { Container, Flex } from "../../styles/globalStyles"
 import {
@@ -73,8 +75,12 @@ const Accordion = ({ details, expanded, setExpanded }) => {
     <>
       <AccordionHeader>
         <AccordionIcon>
-          <span></span>
-          <span></span>
+          <motion.span
+            animate={{ rotate: isOpen ? 0 : 45, x: 3 }}
+          ></motion.span>
+          <motion.span
+            animate={{ rotate: isOpen ? 0 : -45, x: -3 }}
+          ></motion.span>
         </AccordionIcon>
         {details.title}
       </AccordionHeader>

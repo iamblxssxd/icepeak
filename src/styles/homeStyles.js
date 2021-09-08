@@ -189,6 +189,7 @@ export const AccordionHeader = styled.div`
   color: ${props => props.theme.red};
   height: 32px;
   display: flex;
+  align-items: center;
   font-weight: 600;
   font-size: 1.15rem;
   margin: 8px 0;
@@ -199,12 +200,11 @@ export const AccordionIcon = styled.div`
   align-items: center;
   height: 100%;
   margin-right: 8px;
-
   span {
     width: 16px;
     height: 4px;
-    background: ${props => props.theme.red};
-    transition: 0.1 ease-in-out;
+    background: #ea281e;
+    transition: all 0.1s ease-in-out;
   }
 `
 
