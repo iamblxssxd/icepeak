@@ -184,7 +184,7 @@ export const About = styled.div`
 export const Links = styled.div``
 
 // accordion
-export const AccordionHeader = styled.div`
+export const AccordionHeader = styled(motion.div)`
   width: 100%;
   color: ${props => props.theme.red};
   height: 32px;
