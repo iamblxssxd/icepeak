@@ -33,7 +33,7 @@ const accordionIds = [
   },
 ]
 
-const HomeAbout = () => {
+const HomeAbout = ({ onCursor }) => {
   const [expanded, setExpanded] = useState(0)
   return (
     <HomeAboutSection>
@@ -60,6 +60,7 @@ const HomeAbout = () => {
                 details={details}
                 expanded={expanded}
                 setExpanded={setExpanded}
+                onCursor={onCursor}
               />
             ))}
           </Links>
@@ -69,11 +70,15 @@ const HomeAbout = () => {
   )
 }
 
-const Accordion = ({ details, expanded, setExpanded }) => {
+const Accordion = ({ details, expanded, setExpanded, onCursor }) => {
   const isOpen = details.id === expanded
   return (
     <>
-      <AccordionHeader onClick={() => setExpanded(isOpen ? false : details.id)}>
+      <AccordionHeader
+        onClick={() => setExpanded(isOpen ? false : details.id)}
+        onMouseEnter={() => onCursor("hovered")}
+        onMouseLeave={onCursor}
+      >
         <AccordionIcon>
           <motion.span
             animate={{ rotate: isOpen ? 0 : 45, x: 3 }}
