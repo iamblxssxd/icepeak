@@ -13,6 +13,9 @@ import {
   AccordionContent,
 } from "../../styles/homeStyles"
 
+// context
+import { useGlobalStateContext } from "../../context/globalContext"
+
 // accordion Data
 const accordionIds = [
   {
@@ -73,6 +76,7 @@ const HomeAbout = ({ onCursor }) => {
 const Accordion = ({ details, expanded, setExpanded, onCursor }) => {
   const isOpen = details.id === expanded
   const [hovered, setHovered] = useState(false)
+  const { currentTheme } = useGlobalStateContext()
   return (
     <>
       <AccordionHeader
@@ -81,6 +85,9 @@ const Accordion = ({ details, expanded, setExpanded, onCursor }) => {
         onMouseLeave={onCursor}
         onHoverStart={() => setHovered(!hovered)}
         onHoverEnd={() => setHovered(!hovered)}
+        whileHover={{
+          color: currentTheme === "dark" ? "#ffffff" : "#000000",
+        }}
       >
         <AccordionIcon>
           <motion.span
