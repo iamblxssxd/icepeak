@@ -159,7 +159,9 @@ export const FeaturedProjects = styled.div`
   }
 `
 // about
-export const HomeAboutSection = styled.div``
+export const HomeAboutSection = styled(motion.div)`
+  margin-bottom: 300px;
+`
 
 export const About = styled.div`
   width: 100%;
@@ -181,7 +183,9 @@ export const About = styled.div`
   }
 `
 
-export const Links = styled.div``
+export const Links = styled.div`
+  color: ${props => props.theme.text};
+`
 
 // accordion
 export const AccordionHeader = styled(motion.div)`
