@@ -10,6 +10,7 @@ import { normalize } from "styled-normalize"
 import Header from "./header"
 import Cursor from "../components/customCursor"
 import Navigation from "../components/navigation"
+import Footer from "../components/footer"
 
 // context
 import {
@@ -97,6 +98,7 @@ const Layout = ({ children }) => {
         onCursor={onCursor}
       />
       <main>{children}</main>
+      <Footer onCursor={onCursor} />
     </ThemeProvider>
   )
 }
