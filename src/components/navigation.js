@@ -13,6 +13,8 @@ import {
   NavVideos,
 } from "../styles/navigationStyles"
 
+import { IcepeakHeartLogo } from "../assets/svg/social-icons"
+
 const navRoutes = [
   {
     id: 0,
@@ -53,7 +55,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
             <Container>
               <NavHeader>
                 <Flex spaceBetween noHeight>
-                  <h2>Videos</h2>
+                  <IcepeakHeartLogo />
                   <CloseNav
                     onClick={() => setToggleMenu(!toggleMenu)}
                     onMouseEnter={() => onCursor("pointer")}

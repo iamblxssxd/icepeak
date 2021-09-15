@@ -18,8 +18,13 @@ export const NavHeader = styled.div`
   top: 72px;
   position: relative;
 
-  h2 {
-    color: ${props => props.theme.background};
+  svg {
+    width: 96px;
+    height: 96px;
+
+    path {
+      fill: ${props => props.theme.background};
+    }
   }
 `
 

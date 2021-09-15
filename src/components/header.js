@@ -66,20 +66,6 @@ const Header = ({
               <IcepeakLogo />
             </span>
           </Logo>
-          {/* <Logo
-            onMouseEnter={() => onCursor("hovered")}
-            onMouseLeave={onCursor}
-          >
-            <Link to="/">IC</Link>
-            <span
-              onClick={toggleTheme}
-              onMouseEnter={() => onCursor("pointer")}
-              onMouseLeave={onCursor}
-            >
-              3
-            </span>
-            <Link to="/">PEAK</Link>
-          </Logo> */}
           <Menu
             ref={hamburger}
             onClick={() => setToggleMenu(!toggleMenu)}
