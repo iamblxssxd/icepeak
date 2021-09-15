@@ -11,15 +11,35 @@ export const HeaderNav = styled(motion.div)`
   z-index: 99;
 `
 export const Logo = styled.div`
-  a {
+  /* a {
     font-size: 1.8rem;
     font-weight: 800;
     color: ${props => props.theme.text};
+  }
+  svg {
+    width: 100%;
+    height: 100%;
   }
   span {
     font-size: 1.8rem;
     font-weight: 800;
     color: ${props => props.theme.red};
+  } */
+  span {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    padding: 8px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+          fill: ${props => props.theme.text};
+        }
+    }
   }
 `
 

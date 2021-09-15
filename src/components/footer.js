@@ -11,12 +11,12 @@ const Footer = () => {
   return (
     <FooterNav>
       <Container>
-        <Flex>
+        <Flex spaceBetween>
           <FooterContent>
             <p>hey</p>
             <p>inqueries</p>
           </FooterContent>
-          <FooterContent>
+          <FooterContent wider>
             <p>hey</p>
             <p>inqueries</p>
           </FooterContent>

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 
+import { IcepeakLogo } from "../assets/svg/social-icons"
+
 // hook
 import useElementPosition from "../hooks/useElementPosition"
 
@@ -55,6 +57,19 @@ const Header = ({
             onMouseEnter={() => onCursor("hovered")}
             onMouseLeave={onCursor}
           >
+            <span
+              href=""
+              onClick={toggleTheme}
+              onMouseEnter={() => onCursor("pointer")}
+              onMouseLeave={onCursor}
+            >
+              <IcepeakLogo />
+            </span>
+          </Logo>
+          {/* <Logo
+            onMouseEnter={() => onCursor("hovered")}
+            onMouseLeave={onCursor}
+          >
             <Link to="/">IC</Link>
             <span
               onClick={toggleTheme}
@@ -64,7 +79,7 @@ const Header = ({
               3
             </span>
             <Link to="/">PEAK</Link>
-          </Logo>
+          </Logo> */}
           <Menu
             ref={hamburger}
             onClick={() => setToggleMenu(!toggleMenu)}
