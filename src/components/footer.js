@@ -7,7 +7,7 @@ import { FooterNav, FooterContent, FooterSocial } from "../styles/footerStyles"
 // icons
 import { Instagram, Facebook, Twitter } from "../assets/svg/social-icons"
 
-const Footer = () => {
+const Footer = ({ onCursor }) => {
   return (
     <FooterNav>
       <Container>
@@ -21,13 +21,25 @@ const Footer = () => {
             <p>inqueries</p>
           </FooterContent>
           <FooterSocial>
-            <a href="#">
+            <a
+              onMouseEnter={() => onCursor("hovered")}
+              onMouseLeave={onCursor}
+              href="#"
+            >
               <Instagram />
             </a>
-            <a href="#">
+            <a
+              href="#"
+              onMouseEnter={() => onCursor("hovered")}
+              onMouseLeave={onCursor}
+            >
               <Twitter />
             </a>
-            <a href="#">
+            <a
+              href="#"
+              onMouseEnter={() => onCursor("hovered")}
+              onMouseLeave={onCursor}
+            >
               <Facebook />
             </a>
           </FooterSocial>
