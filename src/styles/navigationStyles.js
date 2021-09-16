@@ -23,7 +23,7 @@ export const NavHeader = styled.div`
     height: 96px;
 
     path {
-      fill: ${props => props.theme.background};
+      fill: ${props => props.theme.text};
     }
   }
 `
@@ -76,6 +76,7 @@ export const NavList = styled.div`
 
           svg {
             width: 100px;
+
             path {
               fill: ${props => props.theme.background};
             }
@@ -86,7 +87,21 @@ export const NavList = styled.div`
   }
 `
 
-export const NavFooter = styled.div``
+export const NavFooter = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 56px 0;
+
+  p {
+    color: ${props => props.theme.background};
+  }
+
+  svg path {
+    fill: ${props => props.theme.text};
+  }
+`
 
 export const NavVideos = styled.div`
   position: absolute;

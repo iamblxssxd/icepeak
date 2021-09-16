@@ -12,6 +12,10 @@ import {
   NavFooter,
   NavVideos,
 } from "../styles/navigationStyles"
+import { FooterNav, FooterContent, FooterSocial } from "../styles/footerStyles"
+
+// icons
+import { Instagram, Facebook, Twitter } from "../assets/svg/social-icons"
 
 import { IcepeakHeartLogo } from "../assets/svg/social-icons"
 
@@ -121,7 +125,39 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                   ))}
                 </ul>
               </NavList>
-              <NavFooter></NavFooter>
+              <NavFooter>
+                <Flex spaceBetween>
+                  <FooterContent>
+                    <p>hey</p>
+                  </FooterContent>
+                  <FooterContent>
+                    <p>hey</p>
+                  </FooterContent>
+                  <FooterSocial>
+                    <a
+                      onMouseEnter={() => onCursor("pointer")}
+                      onMouseLeave={onCursor}
+                      href="#"
+                    >
+                      <Instagram />
+                    </a>
+                    <a
+                      href="#"
+                      onMouseEnter={() => onCursor("pointer")}
+                      onMouseLeave={onCursor}
+                    >
+                      <Twitter />
+                    </a>
+                    <a
+                      href="#"
+                      onMouseEnter={() => onCursor("pointer")}
+                      onMouseLeave={onCursor}
+                    >
+                      <Facebook />
+                    </a>
+                  </FooterSocial>
+                </Flex>
+              </NavFooter>
               <NavVideos>
                 <motion.div
                   animate={{ width: revealVideo.show ? 0 : "100%" }}
