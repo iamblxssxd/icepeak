@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, toggleMenu, setToggleMenu }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -78,8 +78,6 @@ const Layout = ({ children }) => {
     cursorType = (cursorStyles.includes(cursorType) && cursorType) || false
     dispatch({ type: "CURSOR_TYPE", cursorType: cursorType })
   }
-
-  const [toggleMenu, setToggleMenu] = useState(false)
 
   return (
     <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>

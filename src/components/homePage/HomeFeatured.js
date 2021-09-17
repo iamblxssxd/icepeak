@@ -15,7 +15,7 @@ import {
   FeaturedProjects,
 } from "../../styles/homeStyles"
 
-const HomeFeatured = ({ onCursor }) => {
+const HomeFeatured = ({ onCursor, toggleMenu, setToggleMenu }) => {
   const [hovered, setHovered] = useState(false)
   const animation = useAnimation()
   const [featuredRef, inView] = useInView({
@@ -96,7 +96,11 @@ const HomeFeatured = ({ onCursor }) => {
       <Container>
         <FeaturedProjects>
           <Flex flexEnd>
-            <button>
+            <button
+              onClick={() => setToggleMenu(!toggleMenu)}
+              onMouseEnter={() => onCursor("pointer")}
+              onMouseLeave={onCursor}
+            >
               <span>More Videos</span>
             </button>
           </Flex>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 
 // components
@@ -22,11 +22,17 @@ const IndexPage = props => {
     dispatch({ type: "CURSOR_TYPE", cursorType: cursorType })
   }
 
+  const [toggleMenu, setToggleMenu] = useState(false)
+
   return (
-    <Layout>
+    <Layout toggleMenu={toggleMenu} setToggleMenu={setToggleMenu}>
       <HomeBanner onCursor={onCursor} />
       <HomeContent onCursor={onCursor} />
-      <HomeFeatured onCursor={onCursor} />
+      <HomeFeatured
+        onCursor={onCursor}
+        toggleMenu={toggleMenu}
+        setToggleMenu={setToggleMenu}
+      />
       <HomeAbout onCursor={onCursor} />
     </Layout>
   )
