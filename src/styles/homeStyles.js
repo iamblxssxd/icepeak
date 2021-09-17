@@ -127,34 +127,21 @@ export const FeaturedProjects = styled.div`
     position: relative;
     padding: 20px;
     display: block;
-    text-align: left;
-    font-size: 1.4rem;
-    line-height: 1;
-    font-weight: 600;
     border: none;
 
     span {
-      margin-right: 100px;
+      margin-left: 100px;
       display: block;
-    }
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      width: 35px;
-      height: 7px;
-      display: block;
-      background: #fff;
-      transform: translateY(-50%);
     }
 
-    &:before {
-      margin-top: -8px;
-    }
-    &:after {
-      margin-top: 8px;
+    svg {
+      margin: 0 auto;
+      width: 64px;
+      height: 64px;
+
+      path {
+        fill: ${props => props.theme.text};
+      }
     }
   }
 `

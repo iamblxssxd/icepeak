@@ -15,6 +15,9 @@ import {
   FeaturedProjects,
 } from "../../styles/homeStyles"
 
+// icon
+import { IcepeakHeartLogo } from "../../assets/svg/social-icons"
+
 const HomeFeatured = ({ onCursor, toggleMenu, setToggleMenu }) => {
   const [hovered, setHovered] = useState(false)
   const animation = useAnimation()
@@ -101,7 +104,9 @@ const HomeFeatured = ({ onCursor, toggleMenu, setToggleMenu }) => {
               onMouseEnter={() => onCursor("pointer")}
               onMouseLeave={onCursor}
             >
-              <span>More Videos</span>
+              <span>
+                <IcepeakHeartLogo />
+              </span>
             </button>
           </Flex>
         </FeaturedProjects>
