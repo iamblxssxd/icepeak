@@ -13,30 +13,36 @@ const Footer = ({ onCursor }) => {
       <Container>
         <Flex spaceBetween>
           <FooterContent>
-            <p>hey</p>
-            <p>inqueries</p>
+            <p>nastya</p>
+            <p>nick</p>
           </FooterContent>
           <FooterContent wider>
-            <p>hey</p>
-            <p>inqueries</p>
+            <p>email</p>
+            <p>ic3peakworld@gmail.com</p>
           </FooterContent>
           <FooterSocial>
             <a
+              href="https://www.instagram.com/ic3peak"
+              target="_blank"
+              rel="noopener noreferrer"
               onMouseEnter={() => onCursor("hovered")}
               onMouseLeave={onCursor}
-              href="#"
             >
               <Instagram />
             </a>
             <a
-              href="#"
+              href="https://twitter.com/ic3peakso"
+              target="_blank"
+              rel="noopener noreferrer"
               onMouseEnter={() => onCursor("hovered")}
               onMouseLeave={onCursor}
             >
               <Twitter />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/ic3peak"
+              target="_blank"
+              rel="noopener noreferrer"
               onMouseEnter={() => onCursor("hovered")}
               onMouseLeave={onCursor}
             >

@@ -35,5 +35,11 @@ export const FooterSocial = styled.div`
       width: 100%;
       height: 100%;
     }
+
+    &:hover {
+      svg path {
+        fill: ${props => props.theme.text};
+      }
+    }
   }
 `
