@@ -24,7 +24,7 @@ const navRoutes = [
     id: 0,
     title: "death no more",
     path: "/death-no-more",
-    video: "death-no-more.mp4",
+    video: "death-no-more-720.mp4",
   },
   {
     id: 1,
@@ -37,6 +37,12 @@ const navRoutes = [
     title: "boo-hoo",
     path: "/boo-hoo",
     video: "boo-hoo.mp4",
+  },
+  {
+    id: 3,
+    title: "sad bitch",
+    path: "/sad-bitch",
+    video: "sad-bitch.mp4",
   },
 ]
 

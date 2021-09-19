@@ -91,7 +91,7 @@ const HomeFeatured = ({ onCursor, toggleMenu, setToggleMenu }) => {
               loop
               autoPlay
               muted
-              src={require("../../assets/video/death-no-more.mp4")}
+              src={require("../../assets/video/death-no-more-720.mp4")}
             ></video>
           </FeaturedVideo>
         </Link>
