@@ -34,6 +34,10 @@ export const FooterSocial = styled.div`
     svg {
       width: 100%;
       height: 100%;
+
+      path {
+        transition: 0.2s ease-in-out;
+      }
     }
 
     &:hover {

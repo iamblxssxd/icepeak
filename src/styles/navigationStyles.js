@@ -98,8 +98,23 @@ export const NavFooter = styled.div`
     color: ${props => props.theme.background};
   }
 
-  svg path {
-    fill: ${props => props.theme.text};
+  svg {
+  }
+
+  a {
+    svg {
+      path {
+        fill: ${props => props.theme.text};
+      }
+    }
+  }
+
+  a:hover {
+    &:hover {
+      path {
+        fill: ${props => props.theme.background};
+      }
+    }
   }
 `
 
