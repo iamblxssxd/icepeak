@@ -138,10 +138,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                     <p>nastya</p>
                     <p>nick</p>
                   </FooterContent>
-                  <FooterContent wider>
-                    <p>email</p>
-                    <p>ic3peakworld@gmail.com</p>
-                  </FooterContent>
+                  <FooterContent wider></FooterContent>
                   <FooterSocial>
                     <a
                       href="https://www.instagram.com/ic3peak"

@@ -140,7 +140,7 @@ export const FeaturedProjects = styled.div`
       height: 64px;
 
       path {
-        fill: ${props => props.theme.text};
+        fill: #fff;
       }
     }
   }

@@ -23,7 +23,7 @@ export const NavHeader = styled.div`
     height: 96px;
 
     path {
-      fill: ${props => props.theme.text};
+      fill: #fff;
     }
   }
 `
