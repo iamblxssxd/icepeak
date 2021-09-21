@@ -5,25 +5,26 @@ export const HeaderNav = styled(motion.div)`
   height: 0px;
   width: 100%;
   position: absolute;
-  top: 72px;
+  top: 50px;
   right: 0;
   left: 0;
   z-index: 99;
 `
 export const Logo = styled.div`
   span {
+    background: ${props => props.theme.red};
     position: relative;
     display: block;
     width: 250px;
-    height: 250px;
-    padding: 8px;
+    height: 100px;
+    padding: 0 32px;
 
     svg {
       width: 100%;
       height: 100%;
 
       path {
-        fill: ${props => props.theme.text};
+        fill: #fff;
       }
     }
   }

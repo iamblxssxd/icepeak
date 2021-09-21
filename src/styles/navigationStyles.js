@@ -15,7 +15,7 @@ export const Nav = styled(motion.div)`
 `
 
 export const NavHeader = styled.div`
-  top: 72px;
+  top: 50px;
   position: relative;
 
   svg {
