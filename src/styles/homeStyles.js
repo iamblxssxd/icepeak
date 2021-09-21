@@ -130,7 +130,8 @@ export const FeaturedProjects = styled.div`
     border: none;
 
     span {
-      margin-left: 100px;
+      margin-left: 108px;
+      margin-right: 12px;
       display: block;
     }
 

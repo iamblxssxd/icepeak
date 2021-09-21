@@ -19,8 +19,8 @@ export const NavHeader = styled.div`
   position: relative;
 
   svg {
-    width: 96px;
-    height: 96px;
+    width: 64px;
+    height: 64px;
 
     path {
       fill: #fff;
