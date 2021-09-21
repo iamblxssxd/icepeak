@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import { AnimatePresence, motion } from "framer-motion"
 
 // styled components
@@ -23,25 +22,25 @@ const navRoutes = [
   {
     id: 0,
     title: "death no more",
-    path: "/death-no-more",
+    path: "https://youtu.be/MBG3Gdt5OGs",
     video: "death-no-more-720.mp4",
   },
   {
     id: 1,
     title: "marching",
-    path: "/marching",
+    path: "https://youtu.be/xqohApD6Ng8",
     video: "marching.mp4",
   },
   {
     id: 2,
     title: "boo-hoo",
-    path: "/boo-hoo",
+    path: "https://youtu.be/Y6tDdjOmsCY",
     video: "boo-hoo.mp4",
   },
   {
     id: 3,
     title: "sad bitch",
-    path: "/sad-bitch",
+    path: "https://youtu.be/zf99kdFw9b8",
     video: "sad-bitch.mp4",
   },
 ]
@@ -107,7 +106,11 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                         })
                       }
                     >
-                      <Link to={`/projects/${route.path}`}>
+                      <a
+                        href={route.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <motion.div
                           initial={{ x: -108 }}
                           whileHover={{
@@ -133,7 +136,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                           </span>
                           {route.title}
                         </motion.div>
-                      </Link>
+                      </a>
                     </motion.li>
                   ))}
                 </ul>
