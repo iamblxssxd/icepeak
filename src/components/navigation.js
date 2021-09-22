@@ -23,7 +23,7 @@ const navRoutes = [
     id: 0,
     title: "death no more",
     path: "https://youtu.be/MBG3Gdt5OGs",
-    video: "death-no-more-720.mp4",
+    video: "death-no-more.mp4",
   },
   {
     id: 1,
@@ -43,12 +43,18 @@ const navRoutes = [
     path: "https://youtu.be/zf99kdFw9b8",
     video: "sad-bitch.mp4",
   },
+  {
+    id: 4,
+    title: "this world is sick",
+    path: "https://youtu.be/kTTwGqeNdlE",
+    video: "this-world-is-sick.mp4",
+  },
 ]
 
 const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
   const [revealVideo, setRevealVideo] = useState({
     show: false,
-    video: "icepeak_homepage.mp4",
+    video: "death-no-more.mp4",
     key: "0",
   })
   return (

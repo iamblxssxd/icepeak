@@ -32,7 +32,7 @@ const HomeBanner = () => {
           loop
           autoPlay
           muted
-          src={require("../../assets/video/death-no-more-720.mp4")}
+          src={require("../../assets/video/death-no-more.mp4")}
         />
       </Video>
       <BannerTitle variants={parent} initial="initial" animate="animate">
