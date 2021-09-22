@@ -50,7 +50,7 @@ const HomeFeatured = ({ onCursor, toggleMenu, setToggleMenu }) => {
       }}
     >
       <Container>
-        <Link to="/">
+        <a>
           <FeaturedContent
             onHoverStart={() => setHovered(!hovered)}
             onHoverEnd={() => setHovered(!hovered)}
@@ -94,7 +94,7 @@ const HomeFeatured = ({ onCursor, toggleMenu, setToggleMenu }) => {
               src={require("../../assets/video/death-no-more.mp4")}
             ></video>
           </FeaturedVideo>
-        </Link>
+        </a>
       </Container>
       <Container>
         <FeaturedProjects>

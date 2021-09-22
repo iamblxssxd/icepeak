@@ -8,11 +8,18 @@ export const Banner = styled.div`
   width: 100%;
   position: relative;
   margin-bottom: 296px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 90px;
+  }
 `
 
 export const Video = styled.div`
   height: 100%;
   width: 100%;
+
+  @media screen and (max-width: 767px) {
+  }
 
   video {
     object-fit: cover;
@@ -25,22 +32,46 @@ export const BannerTitle = styled(motion.h1)`
   left: -18px;
   color: ${props => props.theme.text};
   pointer-events: none;
+
+  @media screen and (max-width: 1023px) {
+    left: -14px;
+    bottom: -63px;
+    line-height: 0.68;
+  }
+
+  @media screen and (max-width: 767px) {
+    left: -8px;
+    bottom: -36px;
+  }
 `
 export const Headline = styled(motion.span)`
   display: block;
   font-size: 23rem;
   font-weight: 900;
   line-height: 0.76;
+
+  @media screen and (max-width: 1023px) {
+    font-size: 17.5rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 10rem;
+  }
 `
 
 // Content section
 
 export const HomeContentSection = styled(motion.div)`
   margin-bottom: 200px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 107px;
+  }
 `
 
 export const Content = styled.h2`
-  width: 53%;
+  margin: 0 auto;
+  width: 58%;
   font-size: 2.3rem;
   font-weight: 400;
   margin-left: 124px;
@@ -48,6 +79,14 @@ export const Content = styled.h2`
 
   a {
     color: ${props => props.theme.text};
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 85%;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 `
 
@@ -60,6 +99,12 @@ export const HomeFeaturedSection = styled(motion.div)`
     position: relative;
     display: block;
   }
+
+  @media screen and (max-width: 767px) {
+    a {
+      margin-bottom: 0;
+    }
+  }
 `
 export const FeaturedContent = styled(motion.div)`
   height: 480px;
@@ -67,6 +112,11 @@ export const FeaturedContent = styled(motion.div)`
   padding: 56px 124px;
   box-sizing: border-box;
   color: ${props => props.theme.text};
+
+  @media screen and (max-width: 767px) {
+    padding: 16px;
+    height: 350px;
+  }
 
   h3 {
     font-size: 1.4rem;
@@ -107,6 +157,13 @@ export const FeaturedContent = styled(motion.div)`
         }
       }
     }
+    @media screen and (max-width: 767px) {
+      font-size: 3.75rem;
+      line-height: 0.71;
+      top: 166px;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
   }
 `
 export const FeaturedVideo = styled.div`
@@ -117,9 +174,17 @@ export const FeaturedVideo = styled.div`
   top: 0;
   display: block;
   overflow: hidden;
+
+  @media screen and (max-width: 767px) {
+    height: 200px;
+  }
 `
 export const FeaturedProjects = styled.div`
   margin-top: 200px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 0;
+  }
 
   button {
     background: ${props => props.theme.red};
@@ -142,6 +207,19 @@ export const FeaturedProjects = styled.div`
 
       path {
         fill: #fff;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 10px;
+
+      span {
+        margin-left: 60px;
+      }
+
+      svg {
+        width: 45px;
+        height: 45px;
       }
     }
   }
