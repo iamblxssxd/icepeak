@@ -18,6 +18,10 @@ export const NavHeader = styled.div`
   top: 50px;
   position: relative;
 
+  @media screen and (max-width: 767px) {
+    top: 32px;
+  }
+
   svg {
     width: 64px;
     height: 64px;
