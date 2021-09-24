@@ -38,6 +38,17 @@ export const Flex = styled.div`
     `}
 
   ${props =>
+    props.spaceBetweenFooter &&
+    css`
+      justify-content: space-between;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    `}
+  
+  ${props =>
     props.flexEnd &&
     css`
       justify-content: flex-end;
@@ -47,6 +58,10 @@ export const Flex = styled.div`
     props.alignTop &&
     css`
       align-items: flex-start;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
     `}
 
   ${props =>

@@ -11,7 +11,7 @@ const Footer = ({ onCursor }) => {
   return (
     <FooterNav>
       <Container>
-        <Flex spaceBetween>
+        <Flex spaceBetweenFooter>
           <FooterContent>
             <p>nastya</p>
             <p>nick</p>

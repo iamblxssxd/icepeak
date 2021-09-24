@@ -90,7 +90,7 @@ export const Content = styled.h2`
   }
 
   @media screen and (max-width: 1023px) {
-    margin-left: 16px;
+    margin-left: 0px;
     width: 85%;
   }
 `
@@ -234,16 +234,9 @@ export const FeaturedProjects = styled.div`
 // about
 export const HomeAboutSection = styled(motion.div)`
   @media screen and (max-width: 767px) {
-    margin-bottom: 86px;
-    /* flex-direction: column !important; */
   }
 
   @media screen and (max-width: 1023px) {
-    /* font-size: 1.5rem;
-    line-height: 1;
-    width: 85%;
-    margin-left: 16px;
-    margin-right: 16px; */
   }
 `
 

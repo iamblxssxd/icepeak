@@ -69,7 +69,6 @@ const HomeAbout = ({ onCursor }) => {
       }}
     >
       <Container>
-        // TODO create a hook for getting media queries
         <Flex alignTop>
           <About>
             <h2>
