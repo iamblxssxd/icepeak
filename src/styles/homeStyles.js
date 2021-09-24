@@ -88,6 +88,11 @@ export const Content = styled.h2`
     margin-left: 16px;
     margin-right: 16px;
   }
+
+  @media screen and (max-width: 1023px) {
+    margin-left: 16px;
+    width: 85%;
+  }
 `
 
 export const HomeFeaturedSection = styled(motion.div)`
@@ -101,6 +106,8 @@ export const HomeFeaturedSection = styled(motion.div)`
   }
 
   @media screen and (max-width: 767px) {
+    margin-bottom: 0;
+    margin-bottom: 32px;
     a {
       margin-bottom: 0;
     }
@@ -225,7 +232,20 @@ export const FeaturedProjects = styled.div`
   }
 `
 // about
-export const HomeAboutSection = styled(motion.div)``
+export const HomeAboutSection = styled(motion.div)`
+  @media screen and (max-width: 767px) {
+    margin-bottom: 86px;
+    /* flex-direction: column !important; */
+  }
+
+  @media screen and (max-width: 1023px) {
+    /* font-size: 1.5rem;
+    line-height: 1;
+    width: 85%;
+    margin-left: 16px;
+    margin-right: 16px; */
+  }
+`
 
 export const About = styled.div`
   width: 100%;
@@ -244,6 +264,24 @@ export const About = styled.div`
     line-height: 1.6rem;
     margin-left: 124px;
     color: ${props => props.theme.text};
+  }
+
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    h2 {
+      margin-left: 0;
+      width: 79%;
+    }
+
+    p {
+      margin-left: 0;
+    }
   }
 `
 
