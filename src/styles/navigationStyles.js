@@ -89,6 +89,13 @@ export const NavList = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 767px) {
+    ul li {
+      font-size: 2rem;
+      line-height: 74px;
+    }
+  }
 `
 
 export const NavFooter = styled.div`
@@ -118,6 +125,12 @@ export const NavFooter = styled.div`
       path {
         fill: ${props => props.theme.background};
       }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    p {
+      display: none;
     }
   }
 `
@@ -153,5 +166,9 @@ export const NavVideos = styled.div`
       /* display: block;
       margin: 0 auto; */
     }
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 `
