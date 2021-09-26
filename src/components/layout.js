@@ -38,6 +38,16 @@ const GlobalStyle = createGlobalStyle`
     overscroll-behavior: none;
     overflow-x: hidden;
   }
+
+
+  @media screen and (max-width: 767px) {
+   * {
+    cursor: auto;
+    }
+
+ 
+  }
+
 `
 
 const Layout = ({ children, toggleMenu, setToggleMenu }) => {

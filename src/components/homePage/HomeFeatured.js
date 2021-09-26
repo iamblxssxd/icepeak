@@ -23,7 +23,7 @@ const HomeFeatured = ({ onCursor, toggleMenu, setToggleMenu }) => {
   const animation = useAnimation()
   const [featuredRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-300px",
+    // rootMargin: "-300px",
   })
 
   useEffect(() => {

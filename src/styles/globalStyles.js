@@ -109,4 +109,8 @@ export const Cursor = styled.div`
     top: ${props => props.theme.top} !important;
     left: ${props => props.theme.left} !important;
   }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `

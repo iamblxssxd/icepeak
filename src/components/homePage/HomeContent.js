@@ -12,7 +12,7 @@ const HomeContent = ({ onCursor }) => {
   const animation = useAnimation()
   const [contentRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-300px",
+    // rootMargin: "-300px",
   })
 
   useEffect(() => {
