@@ -318,5 +318,10 @@ export const AccordionContent = styled(motion.div)`
     color: ${props => props.theme.red};
     display: block;
     font-weight: 300;
+
+    transition: 0.2s ease-in-out;
+    &:hover {
+      color: ${props => props.theme.text};
+    }
   }
 `

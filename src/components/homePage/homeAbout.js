@@ -22,17 +22,65 @@ const accordionIds = [
   {
     id: 0,
     title: "Music",
-    results: ["Youtube", "Spotify", "Apple", "Soundcloud", "Genius"],
+    results: [
+      {
+        id: 0,
+        title: "Youtube",
+        url: "https://www.youtube.com/user/ic3peakso",
+      },
+      {
+        id: 1,
+        title: "Spotify",
+        url:
+          "https://open.spotify.com/artist/3luonLzvSOxdU8ytCaEIK8?si=fa0OBOuRR8G5ZZyXNrrgTA",
+      },
+      {
+        id: 2,
+        title: "Apple",
+        url: "https://music.apple.com/us/artist/ic3peak/829814422",
+      },
+      {
+        id: 3,
+        title: "Soundcloud",
+        url: "https://soundcloud.com/ic3peak",
+      },
+      {
+        id: 4,
+        title: "Genius",
+        url: "https://genius.com/artists/Ic3peak",
+      },
+    ],
   },
   {
     id: 1,
     title: "Press",
     results: [
-      "Let It All Burn.",
-      "The Guardian interview with IC3PEAK",
-      "Russia: Fighting the Kremlin with music",
-      "IC3PEAK – music and modern art",
-      "Young Russian Musicians Struggle Under Government Scrutiny",
+      {
+        id: 0,
+        title: "Let It All Burn.",
+        url: "https://www.youtube.com/watch?v=arL4iw3td2s",
+      },
+      {
+        id: 1,
+        title: "The Guardian interview with IC3PEAK",
+        url: "https://www.youtube.com/watch?v=RvJRdI_xFYU",
+      },
+      {
+        id: 2,
+        title: "Russia: Fighting the Kremlin with music",
+        url: "https://www.youtube.com/watch?v=SjJs0ioeg0k",
+      },
+      {
+        id: 3,
+        title: "IC3PEAK – music and modern art",
+        url: "https://www.youtube.com/watch?v=95ReakCrKX0",
+      },
+      {
+        id: 4,
+        title: "Young Russian Musicians Struggle Under Government Scrutiny",
+        url:
+          "https://www.npr.org/2019/01/17/685973630/young-russian-musicians-struggle-under-government-scrutiny",
+      },
     ],
   },
 ]
@@ -133,9 +181,18 @@ const Accordion = ({ details, expanded, setExpanded, onCursor }) => {
         key="content"
         animate={{ height: isOpen ? "100%" : "0" }}
         transition={{ duration: 0.8, ease: [0.5, 0.05, -0.01, 0.9] }}
+        onMouseEnter={() => onCursor("pointer")}
+        onMouseLeave={onCursor}
+        onHoverStart={() => setHovered(!hovered)}
+        onHoverEnd={() => setHovered(!hovered)}
+        whileHover={{
+          color: currentTheme === "dark" ? "#ffffff" : "#000000",
+        }}
       >
         {details.results.map((result, index) => (
-          <span key={index}>{result}</span>
+          <a key={index} href={result.url}>
+            <span>{result.title}</span>
+          </a>
         ))}
       </AccordionContent>
     </>

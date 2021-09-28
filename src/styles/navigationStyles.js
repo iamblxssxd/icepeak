@@ -128,7 +128,7 @@ export const NavFooter = styled.div`
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1023px) {
     p {
       display: none;
     }
