@@ -81,6 +81,13 @@ export const Content = styled.h2`
     color: ${props => props.theme.text};
   }
 
+  span {
+    transition: 0.2s ease-in-out;
+    &:hover {
+      color: ${props => props.theme.red};
+    }
+  }
+
   @media screen and (max-width: 767px) {
     font-size: 1.5rem;
     line-height: 1;

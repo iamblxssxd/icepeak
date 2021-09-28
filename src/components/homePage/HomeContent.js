@@ -40,27 +40,29 @@ const HomeContent = ({ onCursor }) => {
     >
       <Container>
         <Content>
-          IC3PEAK is a Russian electronic music band created by{" "}
-          <Link
-            to="/"
+          IC3PEAK is a Russian experimental electronic duo formed by
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/ndless/"
             onMouseEnter={() => onCursor("hovered")}
             onMouseLeave={onCursor}
           >
-            Anastasia Kreslina
-          </Link>{" "}
-          and{" "}
-          <Link
-            to="/"
+            <span> Anastasia Kreslina </span>
+          </a>
+          and
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/ic3nick/"
             onMouseEnter={() => onCursor("hovered")}
             onMouseLeave={onCursor}
           >
-            Nikolay Kostilev
-          </Link>
-          . They achieved worldwide notoriety because of the political
-          undertones in their music criticizing the Russian government, which
-          lead to attempts of censorship of their music in 2019. Their effects
-          in mainstream media led to outpouring support throughout the West, and
-          in Russia.
+            <span> Nikolay Kostilev </span>
+          </a>
+          which largely focuses on social commentary on modern life in Russia.
+          Their music criticizes the police state and certain values the country
+          holds. Playing their music on the radio is illegal in Russia.
         </Content>
       </Container>
     </HomeContentSection>

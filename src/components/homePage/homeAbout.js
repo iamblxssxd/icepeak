@@ -120,15 +120,17 @@ const HomeAbout = ({ onCursor }) => {
         <Flex alignTop>
           <About>
             <h2>
-              IC3PEAK’s music focuses largely on social commentary on modern
-              life in Russia.
+              The group became target of censorship by the Russian security
+              forces with their concerts being suddenly stopped and the members
+              being detained for no reason.
             </h2>
             <p>
-              Their music criticizes the police state and certain values the
-              country holds. Given their counterculture stance, this is how
-              IC3PEAK finds themselves on the Blacklist. The ramifications of
-              this designation are real. Playing their music on the radio is
-              illegal in Russia.
+              Conservative media have accused them of distribution of
+              "subversive" material and their music has been called frightening
+              and destructive. Not scared by the attempts to silence them, in
+              2019 the group became speakers for free speech in Russia and have
+              guested in multiple rallies. The members self-describe as
+              "Audiovisual terrorism".
             </p>
           </About>
           <Links>
@@ -190,7 +192,12 @@ const Accordion = ({ details, expanded, setExpanded, onCursor }) => {
         }}
       >
         {details.results.map((result, index) => (
-          <a key={index} href={result.url}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            key={index}
+            href={result.url}
+          >
             <span>{result.title}</span>
           </a>
         ))}
