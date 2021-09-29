@@ -50,7 +50,11 @@ const HomeFeatured = ({ onCursor, toggleMenu, setToggleMenu }) => {
       }}
     >
       <Container>
-        <a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://youtu.be/MBG3Gdt5OGs"
+        >
           <FeaturedContent
             onHoverStart={() => setHovered(!hovered)}
             onHoverEnd={() => setHovered(!hovered)}

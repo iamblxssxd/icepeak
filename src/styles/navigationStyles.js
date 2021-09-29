@@ -47,6 +47,12 @@ export const CloseNav = styled.div`
       background: ${props => props.theme.background};
       margin: 8px;
     }
+    @media screen and (max-width: 767px) {
+      span {
+        width: 26px;
+        height: 5px;
+      }
+    }
   }
 `
 
