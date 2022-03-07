@@ -120,17 +120,25 @@ const HomeAbout = ({ onCursor }) => {
         <Flex alignTop>
           <About>
             <h2>
-              The group became target of censorship by the Russian security
-              forces with their concerts being suddenly stopped and the members
-              being detained for no reason.
+              Russia ≠ Russian government. Russia ≠ Putin. Stop the war in
+              Ukraine.
             </h2>
             <p>
-              Conservative media have accused them of distribution of
-              "subversive" material and their music has been called frightening
-              and destructive. Not scared by the attempts to silence them, in
-              2019 the group became speakers for free speech in Russia and have
-              guested in multiple rallies. The members self-describe as
-              "Audiovisual terrorism".
+              Right now, hundreds of people are dying in Ukraine. It breaks our
+              hearts and we don't know how to put it into words. The Russian
+              government with Putin in charge is waging a war that shakes the
+              future of both nations. It makes the whole world a more dangerous
+              place.
+            </p>
+            <p>
+              Propaganda poisons the minds of people and fuels hate. Censorship
+              and police surveillance in Russia are reaching new heights. It
+              becomes more difficult to get accurate information and if you do,
+              it becomes more dangerous to be vocal. Yet, please do not be
+              silent. We performed and took part in protests, where thousands of
+              Russians risked jail time just to disagree with the regime that we
+              never voted for. Peaceful protests still happen every day. We will
+              continue to resist.
             </p>
           </About>
           <Links>

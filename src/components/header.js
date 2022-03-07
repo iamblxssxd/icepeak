@@ -3,9 +3,6 @@ import { Link } from "gatsby"
 
 import { IcepeakLogo } from "../assets/svg/social-icons"
 
-// hook
-import useElementPosition from "../hooks/useElementPosition"
-
 // styled comonents
 import { HeaderNav, Logo, Menu } from "../styles/headerStyles"
 import { Container, Flex } from "../styles/globalStyles"
@@ -16,17 +13,9 @@ import {
   useGlobalDispatchContext,
 } from "../context/globalContext"
 
-const Header = ({
-  onCursor,
-  toggleMenu,
-  setToggleMenu,
-  hamburgerPosition,
-  setHamburgerPosition,
-}) => {
+const Header = ({ onCursor, toggleMenu, setToggleMenu }) => {
   const dispatch = useGlobalDispatchContext()
   const { currentTheme } = useGlobalStateContext()
-  const hamburger = useRef(null)
-  const position = useElementPosition(hamburger)
 
   const toggleTheme = () => {
     if (currentTheme === "dark") {
@@ -34,11 +23,6 @@ const Header = ({
     } else {
       dispatch({ type: "TOGGLE_THEME", theme: "dark" })
     }
-  }
-
-  const menuHover = () => {
-    onCursor("locked")
-    setHamburgerPosition({ x: position.x, y: position.y + 72 })
   }
 
   useEffect(() => {
@@ -58,7 +42,6 @@ const Header = ({
             onMouseLeave={onCursor}
           >
             <span
-              href=""
               onClick={toggleTheme}
               onMouseEnter={() => onCursor("pointer")}
               onMouseLeave={onCursor}
@@ -67,10 +50,9 @@ const Header = ({
             </span>
           </Logo>
           <Menu
-            ref={hamburger}
             onClick={() => setToggleMenu(!toggleMenu)}
-            onMouseEnter={menuHover}
             onMouseLeave={onCursor}
+            onMouseEnter={() => onCursor("hovered")}
           >
             <button>
               <span></span>
