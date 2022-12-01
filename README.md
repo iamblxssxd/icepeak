@@ -1,6 +1,6 @@
-# Icepeak: <a href="https://nimble-sprinkles-6f1513#" target="_blank">Live</a>
+# Icepeak: <a href="https://icepeak-blxssxd.netlify.app/" target="_blank">Live</a>
 
-<a href="https://nimble-sprinkles-6f1513##" target="_blank"><img src="./icepeak.gif" /></a>
+<a href="https://icepeak-blxssxd.netlify.app/" target="_blank"><img src="./icepeak.gif" /></a>
 IC3PEAK is a Russian experimental electronic duo formed by Anastasia Kreslina and Nikolay Kostilev which largely focuses on social commentary on modern life in Russia.
 Their music criticizes the police state and certain values the country
 holds. Playing their music on the radio is illegal in Russia.
